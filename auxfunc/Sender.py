@@ -42,10 +42,10 @@ class Sender:
             # If the response was successful, no Exception will be raised
             response.raise_for_status()
         except HTTPError as http_err:
-            print(f'HTTP error occurred: {http_err}')  # Python 3.6
+            print('HTTP error occurred: {}'.format(http_err))
             raise HTTPError(http_err)
         except Exception as err:
-            print(f'Other error occurred: {err}')  # Python 3.6
+            print('Other error occurred: {}'.format(err))  # Python 3.6
             raise Exception(err)
         else:
             print('Successfully sent package')
