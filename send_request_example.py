@@ -15,9 +15,9 @@ from auxfunc.Sender import Sender
 
 # Usar el número de alguien incluyendo el indicativo
 # Esto posibilita ver las predicciones en la página web
-OBSERVER = ''# número celular con indicativo +57
-API_KEY =  '' # solo para pruebas de estudiantes
-API =  ""
+OBSERVER = ''  # Número celular con indicativo +57
+API_KEY = ''  # Solo para pruebas de estudiantes
+API = ''
 
 # Dirección de la imagen local a predecir
 IM_FILEPATH = path.join('assets', 'test_im.jpg')
@@ -29,7 +29,7 @@ def main():
     im = cv.imread(IM_FILEPATH)
 
     payload = {
-        'task': 'predict',
+        'task': 'predict-cloud',
         'place': 'Unknown',
         'observer': OBSERVER,
         'date': date,
