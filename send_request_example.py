@@ -18,7 +18,7 @@ from auxfunc.Sender import Sender
 OBSERVER = ''  # Número celular con indicativo +57
 API_KEY = ''  # Solo para pruebas de estudiantes
 API = ''
-
+SENDER = '' # Nombre de usuario
 # Dirección de la imagen local a predecir
 IM_FILEPATH = path.join('assets', 'test_im.jpg')
 MODEL = 'detector-free' # Nombre del modelo a usar para predecir la imagen enviada
@@ -35,6 +35,7 @@ def main():
         'date': date,
         'frame': im,
         'model': MODEL,
+        'sender': SENDER
     }
 
     my_sender = Sender(API, API_KEY)
