@@ -38,7 +38,7 @@ class Sender:
         try:
             url = '{}/{}'.format(self.API_ENDPOINT, '')
             print('Wating server response...')
-            response = requests.post(url, data=json_data, headers=headers)  # data-> body in http request
+            response = requests.post(url, data=json_data, headers=headers, timeout=6000)  # data-> body in http request
             # If the response was successful, no Exception will be raised
             response.raise_for_status()
         except HTTPError as http_err:
